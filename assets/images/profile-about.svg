@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutLightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="aboutAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <filter id="aboutShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Light card background -->
+  <rect x="25" y="25" width="400" height="400" rx="28" fill="url(#aboutLightBg)" stroke="#CBD5E1" stroke-width="2" filter="url(#aboutShadow)"/>
+
+  <!-- White circular frame -->
+  <circle cx="225" cy="210" r="145" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="6" filter="url(#aboutShadow)"/>
+
+  <!-- Avatar graphic -->
+  <g fill="url(#aboutAccent)">
+    <!-- Head -->
+    <circle cx="225" cy="165" r="50"/>
+    <!-- Hair style overlay -->
+    <path d="M175 160 C175 110 275 110 275 160 C265 125 185 125 175 160 Z" fill="#334155"/>
+    <!-- Shoulders -->
+    <path d="M140 315 C140 235 185 220 225 220 C265 220 310 235 310 315 Z"/>
+  </g>
+
+  <!-- Subtle camera/photo icon badge -->
+  <g transform="translate(195, 275)">
+    <circle cx="30" cy="30" r="22" fill="#7C5CFC" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M22 25 L24 22 L36 22 L38 25 L41 25 C42.1 25 43 25.9 43 27 L43 37 C43 38.1 42.1 39 41 39 L19 39 C17.9 39 17 38.1 17 37 L17 27 C17 25.9 17.9 25 19 25 L22 25 Z" fill="#FFFFFF"/>
+    <circle cx="30" cy="32" r="4.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Notice label at bottom -->
+  <rect x="75" y="375" width="300" height="30" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="225" y="395" fill="#475569" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    About Image Placeholder • Easy to Replace
+  </text>
+</svg>

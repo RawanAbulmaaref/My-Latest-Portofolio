@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="clBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1329"/>
+      <stop offset="100%" stop-color="#0E2439"/>
+    </linearGradient>
+    <linearGradient id="clAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#clBg)"/>
+
+  <!-- Browser Header -->
+  <rect width="600" height="42" fill="#111827" rx="16"/>
+  <circle cx="28" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="46" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="64" cy="21" r="5.5" fill="#10B981"/>
+  <rect x="100" y="11" width="340" height="20" rx="10" fill="#1F2937"/>
+  <text x="120" y="25" fill="#9CA3AF" font-family="sans-serif" font-size="11">https://3yadety-clinic.preview/admin/dashboard</text>
+
+  <!-- Left Sidebar Mini -->
+  <rect x="25" y="58" width="115" height="280" rx="10" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+  <text x="42" y="85" fill="#60A5FA" font-family="sans-serif" font-size="13" font-weight="bold">🏥 3yadety</text>
+  <rect x="35" y="105" width="95" height="28" rx="6" fill="#1E293B"/>
+  <text x="45" y="123" fill="#93C5FD" font-family="sans-serif" font-size="11">📊 Overview</text>
+  <text x="45" y="153" fill="#9CA3AF" font-family="sans-serif" font-size="11">👨‍⚕️ Doctors</text>
+  <text x="45" y="183" fill="#9CA3AF" font-family="sans-serif" font-size="11">🧑‍🤝‍🧑 Patients</text>
+  <text x="45" y="213" fill="#9CA3AF" font-family="sans-serif" font-size="11">📅 Schedule</text>
+  <text x="45" y="243" fill="#9CA3AF" font-family="sans-serif" font-size="11">💳 Invoices</text>
+
+  <!-- Main Content Area -->
+  <!-- Top Stats Row -->
+  <g transform="translate(155, 58)">
+    <rect width="125" height="65" rx="8" fill="#111827" stroke="#2563EB" stroke-width="1.2"/>
+    <text x="15" y="25" fill="#94A3B8" font-family="sans-serif" font-size="11">Total Patients</text>
+    <text x="15" y="50" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="bold">2,840</text>
+
+    <rect x="140" width="125" height="65" rx="8" fill="#111827" stroke="#10B981" stroke-width="1.2"/>
+    <text x="155" y="25" fill="#94A3B8" font-family="sans-serif" font-size="11">Appointments</text>
+    <text x="155" y="50" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="bold">48 Today</text>
+
+    <rect x="280" width="130" height="65" rx="8" fill="#111827" stroke="#0D9488" stroke-width="1.2"/>
+    <text x="295" y="25" fill="#94A3B8" font-family="sans-serif" font-size="11">SQL Server</text>
+    <text x="295" y="50" fill="#34D399" font-family="sans-serif" font-size="16" font-weight="bold">Connected</text>
+  </g>
+
+  <!-- Table Preview -->
+  <g transform="translate(155, 138)">
+    <rect width="415" height="200" rx="8" fill="#111827" stroke="#1F2937" stroke-width="1"/>
+    <!-- Table Header -->
+    <rect width="415" height="34" fill="#1E293B" rx="8"/>
+    <text x="15" y="22" fill="#CBD5E1" font-family="sans-serif" font-size="11" font-weight="bold">Patient Name</text>
+    <text x="150" y="22" fill="#CBD5E1" font-family="sans-serif" font-size="11" font-weight="bold">Doctor</text>
+    <text x="260" y="22" fill="#CBD5E1" font-family="sans-serif" font-size="11" font-weight="bold">Time</text>
+    <text x="340" y="22" fill="#CBD5E1" font-family="sans-serif" font-size="11" font-weight="bold">Status</text>
+
+    <!-- Row 1 -->
+    <text x="15" y="62" fill="#F1F5F9" font-family="sans-serif" font-size="11">Sarah Jenkins</text>
+    <text x="150" y="62" fill="#94A3B8" font-family="sans-serif" font-size="11">Dr. Ahmed (Cardio)</text>
+    <text x="260" y="62" fill="#94A3B8" font-family="sans-serif" font-size="11">10:30 AM</text>
+    <rect x="335" y="48" width="65" height="20" rx="10" fill="#065F46"/>
+    <text x="367" y="62" fill="#6EE7B7" font-family="sans-serif" font-size="10" text-anchor="middle">Completed</text>
+
+    <!-- Row 2 -->
+    <text x="15" y="102" fill="#F1F5F9" font-family="sans-serif" font-size="11">Omar Mansour</text>
+    <text x="150" y="102" fill="#94A3B8" font-family="sans-serif" font-size="11">Dr. Mona (Dental)</text>
+    <text x="260" y="102" fill="#94A3B8" font-family="sans-serif" font-size="11">11:15 AM</text>
+    <rect x="335" y="88" width="65" height="20" rx="10" fill="#1E3A8A"/>
+    <text x="367" y="102" fill="#93C5FD" font-family="sans-serif" font-size="10" text-anchor="middle">In Clinic</text>
+
+    <!-- Row 3 -->
+    <text x="15" y="142" fill="#F1F5F9" font-family="sans-serif" font-size="11">Karim Tarek</text>
+    <text x="150" y="142" fill="#94A3B8" font-family="sans-serif" font-size="11">Dr. Rasha (Pediatrics)</text>
+    <text x="260" y="142" fill="#94A3B8" font-family="sans-serif" font-size="11">01:00 PM</text>
+    <rect x="335" y="128" width="65" height="20" rx="10" fill="#78350F"/>
+    <text x="367" y="142" fill="#FCD34D" font-family="sans-serif" font-size="10" text-anchor="middle">Scheduled</text>
+
+    <!-- Row 4 -->
+    <text x="15" y="180" fill="#F1F5F9" font-family="sans-serif" font-size="11">Laila Hassan</text>
+    <text x="150" y="180" fill="#94A3B8" font-family="sans-serif" font-size="11">Dr. Ahmed (Cardio)</text>
+    <text x="260" y="180" fill="#94A3B8" font-family="sans-serif" font-size="11">02:30 PM</text>
+    <rect x="335" y="166" width="65" height="20" rx="10" fill="#78350F"/>
+    <text x="367" y="180" fill="#FCD34D" font-family="sans-serif" font-size="10" text-anchor="middle">Scheduled</text>
+  </g>
+</svg>

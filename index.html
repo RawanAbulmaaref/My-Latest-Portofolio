@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rawan Abulmaaref | Full Stack .NET Developer Portfolio</title>
+  <meta name="description" content="Rawan Abulmaaref - Junior Full Stack .NET Developer with experience in building responsive web applications using HTML, CSS, JavaScript, C#, .NET, ASP.NET Core, and SQL.">
+  <meta name="keywords" content="Rawan Abulmaaref, Full Stack .NET Developer, Web Developer, C#, ASP.NET Core, JavaScript, Luxor University, Software Engineer">
+  <meta name="author" content="Rawan Abulmaaref">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Rawan Abulmaaref | Full Stack .NET Developer">
+  <meta property="og:description" content="Junior Full Stack .NET Developer building clean, user-friendly interfaces and reliable backend solutions.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Animated Particle Starfield Canvas -->
+  <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="ambient-glow ambient-glow--1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--2" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="navbar">
+    <div class="container header__container">
+      <!-- Logo on the left -->
+      <a href="#home" class="logo" id="header-logo" aria-label="Rawan Abulmaaref Home">
+        <span class="logo__bracket">&lt;</span><span class="logo__text">RA</span><span class="logo__slash">/</span><span class="logo__bracket">&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav" id="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link active" id="nav-home">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link" id="nav-about">About</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link" id="nav-education">Education</a></li>
+          <li class="nav__item"><a href="#experience" class="nav__link" id="nav-experience">Experience</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link" id="nav-skills">Skills</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link" id="nav-projects">Projects</a></li>
+          <li class="nav__item"><a href="#testimonials" class="nav__link" id="nav-testimonials">Testimonials</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link" id="nav-services">Services</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link" id="nav-contact">Get In Touch</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Controls: Dark/Light Mode & CV button -->
+      <div class="header__actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
+          <i class="fa-solid fa-moon theme-toggle__icon" id="theme-icon"></i>
+        </button>
+
+        <!-- CV Button -->
+        <!-- EDITABLE PLACEHOLDER: Replace 'assets/Rawan_Abulmaaref_CV.pdf' with the link to your actual CV file -->
+        <a href="assets/Rawan_Abulmaaref_CV_ATS (1).pdf" download="Rawan_Abulmaaref_CV" class="btn btn--outline btn--sm cv-btn" id="cv-button" title="Download CV">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>CV</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link"><i class="fa-solid fa-user"></i> About</a></li>
+        <li class="mobile-nav__item"><a href="#education" class="mobile-nav__link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+        <li class="mobile-nav__item"><a href="#experience" class="mobile-nav__link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+        <li class="mobile-nav__item"><a href="#skills" class="mobile-nav__link"><i class="fa-solid fa-code"></i> Skills</a></li>
+        <li class="mobile-nav__item"><a href="#projects" class="mobile-nav__link"><i class="fa-solid fa-layer-group"></i> Projects</a></li>
+        <li class="mobile-nav__item"><a href="#testimonials" class="mobile-nav__link"><i class="fa-solid fa-comment-dots"></i> Testimonials</a></li>
+        <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link"><i class="fa-solid fa-cubes"></i> Services</a></li>
+        <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link"><i class="fa-solid fa-envelope"></i> Get In Touch</a></li>
+      </ul>
+      <div class="mobile-nav__footer">
+        <a href="assets/Rawan_Abulmaaref_CV.txt" download="Rawan_Abulmaaref_CV" class="btn btn--primary btn--full">
+          <i class="fa-solid fa-file-arrow-down"></i> Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== SECTION 1: HOME ==================== -->
+    <section class="hero section" id="home">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            <span>Available for Opportunities</span>
+          </div>
+          
+          <span class="hero__greeting">Hello, I'm</span>
+          <h1 class="hero__name">
+            Rawan Abulmaaref
+          </h1>
+
+          <div class="hero__title-wrap">
+            <span class="hero__job-title" id="typewriter-text" data-text="Full-Stack .NET Developer" aria-label="Full-Stack .NET Developer">Full-Stack .NET Developer</span><span class="typewriter-cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero__bio">
+            Junior Full Stack .NET Developer with experience in building responsive web applications using HTML, CSS, JavaScript, C#, .NET, ASP.NET Core, and SQL. Interested in developing clean, user-friendly interfaces and reliable backend solutions.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--primary" id="hero-hire-me">
+              <span>Hire Me</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a href="#projects" class="btn btn--secondary" id="hero-view-projects">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Social Media Icons (Easy to Edit) -->
+          <div class="hero__socials" aria-label="Social media profiles">
+            <span class="hero__socials-label">Connect:</span>
+            <div class="social-links">
+              <!-- EDITABLE PLACEHOLDER: Replace '#' with your Facebook profile URL -->
+              <a href="https://www.facebook.com/rawan.abulmaaref/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook profile" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <!-- EDITABLE PLACEHOLDER: Replace '#' with your LinkedIn profile URL -->
+              <a href="https://www.linkedin.com/in/rawan-abulmaaref-6296a9345/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn profile" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <!-- EDITABLE PLACEHOLDER: Replace '#' with your GitHub profile URL -->
+              <a href="https://github.com/RawanAbulmaaref" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub profile" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visuals: Circular profile image surrounded by glowing frame -->
+        <div class="hero__visual">
+          <div class="profile-frame">
+            <div class="profile-frame__glow"></div>
+            <div class="profile-frame__ring"></div>
+            <!-- EDITABLE PLACEHOLDER: Replace 'assets/images/profile-hero.svg' with your actual portrait photo -->
+            <div class="profile-frame__image-wrapper">
+              <img src="assets/images/aboutportoflio photo.png" alt="Rawan Abulmaaref - Full Stack .NET Developer" class="profile-frame__img" id="hero-profile-img">
+            </div>
+            <!-- Tech Floating Badges -->
+            <div class="tech-badge tech-badge--1" title="C# / .NET">
+              <i class="fa-solid fa-code"></i>
+              <span>.NET Core</span>
+            </div>
+            <div class="tech-badge tech-badge--2" title="Full Stack">
+              <i class="fa-solid fa-database"></i>
+              <span>SQL Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <a href="#about" class="hero__scroll-indicator" aria-label="Scroll down to About section">
+        <span class="hero__scroll-text">Scroll Down</span>
+        <i class="fa-solid fa-angles-down hero__scroll-arrow"></i>
+      </a>
+    </section>
+
+    <!-- ==================== SECTION 2: ABOUT ME ==================== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <!-- Section Header with colored underline -->
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- About Two-Column Layout -->
+        <div class="about__grid">
+          <!-- Left Column: Image inside white circular frame on light background card -->
+          <div class="about__image-col">
+            <div class="about__image-card">
+              <!-- EDITABLE PLACEHOLDER: Replace 'assets/images/profile-about.svg' with your personal image -->
+              <div class="about__image-frame">
+                <img src="assets/images/Rwana.png" alt="Rawan Abulmaaref About Image Placeholder" class="about__img" id="about-profile-img">
+              </div>
+              <div class="about__image-caption">
+                <span class="about__name-tag">Rawan Abulmaaref</span>
+                <span class="about__role-tag">Full Stack .NET Developer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Bio Paragraphs -->
+          <div class="about__content-col">
+            <div class="about__bio">
+              <p class="about__paragraph">
+                I'm Rawan Abulmaaref, a Computer Science student and Junior Full Stack .NET Developer focused on building modern and responsive web applications.
+              </p>
+              <p class="about__paragraph">
+                I have developed 4+ projects using HTML, CSS, JavaScript, C#, .NET, ASP.NET Core, and SQL.
+              </p>
+              <p class="about__paragraph">
+                I focus on creating user-friendly interfaces and reliable backend solutions while continuously improving my development skills.
+              </p>
+            </div>
+
+            <!-- Stats Cards (4 attractive cards with beautiful icons) -->
+            <div class="stats-grid">
+              <!-- Stat Card 1: Student -->
+              <div class="stat-card">
+                <div class="stat-card__icon-wrap">
+                  <i class="fa-solid fa-user-graduate stat-card__icon"></i>
+                </div>
+                <div class="stat-card__info">
+                  <span class="stat-card__value">Student</span>
+                  <span class="stat-card__label">Current Status</span>
+                </div>
+              </div>
+
+              <!-- Stat Card 2: 4+ Projects Completed -->
+              <div class="stat-card">
+                <div class="stat-card__icon-wrap">
+                  <i class="fa-solid fa-folder-closed stat-card__icon"></i>
+                </div>
+                <div class="stat-card__info">
+                  <span class="stat-card__value">4+</span>
+                  <span class="stat-card__label">Projects Completed</span>
+                </div>
+              </div>
+
+              <!-- Stat Card 3: 2 Development Sides -->
+              <div class="stat-card">
+                <div class="stat-card__icon-wrap">
+                  <i class="fa-solid fa-code-compare stat-card__icon"></i>
+                </div>
+                <div class="stat-card__info">
+                  <span class="stat-card__value">2</span>
+                  <span class="stat-card__label">Development Sides (Frontend &amp; Backend)</span>
+                </div>
+              </div>
+
+              <!-- Stat Card 4: .NET Main Technology -->
+              <div class="stat-card">
+                <div class="stat-card__icon-wrap">
+                  <i class="fa-brands fa-microsoft stat-card__icon"></i>
+                </div>
+                <div class="stat-card__info">
+                  <span class="stat-card__value">.NET</span>
+                  <span class="stat-card__label">Main Technology</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: EDUCATION ==================== -->
+    <section class="education section" id="education">
+      <div class="container">
+        <!-- Section Header with colored underline -->
+        <div class="section-header">
+          <h2 class="section-title">Education</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- Education Card Container -->
+        <div class="education__wrapper">
+          <div class="education-card">
+            <!-- Card Header: Graduation Cap icon on top-left, Study Status Badge on top-right -->
+            <div class="education-card__header">
+              <div class="education-card__icon-box">
+                <i class="fa-solid fa-graduation-cap education-card__icon"></i>
+              </div>
+              <div class="education-card__badge">
+                <i class="fa-regular fa-clock"></i>
+                <span>Student (Expected 2028)</span>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="education-card__body">
+              <h3 class="education-card__degree">
+                Bachelor's Degree - Faculty of Computers and Information (Luxor University)
+              </h3>
+
+              <div class="education-card__grade-wrapper">
+                <span class="education-card__grade">⭐ Grade: Excellent</span>
+              </div>
+
+              <p class="education-card__description">
+                "Pursuing a comprehensive education in Computer Science at the Faculty of Computers and Information, focusing on software engineering principles, algorithms, and advanced system development."
+              </p>
+            </div>
+
+            <!-- Card Footer Tech Tags -->
+            <div class="education-card__footer">
+              <span class="edu-tag"><i class="fa-solid fa-book-open"></i> Computer Science</span>
+              <span class="edu-tag"><i class="fa-solid fa-network-wired"></i> Information Systems</span>
+              <span class="edu-tag"><i class="fa-solid fa-laptop-code"></i> Software Engineering</span>
+              <span class="edu-tag"><i class="fa-solid fa-building-columns"></i> Luxor University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: EXPERIENCE ==================== -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <!-- Section Header with colored underline -->
+        <div class="section-header">
+          <h2 class="section-title">Experience</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- Vertical Timeline UI -->
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"></div>
+
+          <!-- Experience Item 1: DEPI React Frontend -->
+          <div class="timeline__item">
+            <div class="timeline__node" aria-hidden="true">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <div class="timeline__role-group">
+                  <h3 class="timeline__role">Digital Egypt Pioneers Initiative (DEPI) — Trainee</h3>
+                  <span class="timeline__track">React Front-End Web Development</span>
+                </div>
+                <div class="timeline__period">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  <span>Jul 2025 – Dec 2025</span>
+                </div>
+              </div>
+              <ul class="timeline__list">
+                <li>Developed responsive web interfaces using React, HTML, CSS, and JavaScript.</li>
+                <li>Applied frontend concepts through practical projects.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2: ITI Backend .NET -->
+          <div class="timeline__item">
+            <div class="timeline__node" aria-hidden="true">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <div class="timeline__role-group">
+                  <h3 class="timeline__role">Information Technology Institute (ITI) — Trainee</h3>
+                  <span class="timeline__track">Back-End .NET Development</span>
+                </div>
+                <div class="timeline__period">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  <span>Jul 2026 – Aug 2026</span>
+                </div>
+              </div>
+              <ul class="timeline__list">
+                <li>Developed backend applications using C#, .NET, ASP.NET Core, and SQL.</li>
+                <li>Applied programming and database concepts through practical projects.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tech-pill">C#</span>
+                <span class="tech-pill">.NET</span>
+                <span class="tech-pill">ASP.NET Core</span>
+                <span class="tech-pill">SQL</span>
+                <span class="tech-pill">Backend Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 3: DEPI Backend .NET -->
+          <div class="timeline__item">
+            <div class="timeline__node" aria-hidden="true">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <div class="timeline__role-group">
+                  <h3 class="timeline__role">Digital Egypt Pioneers Initiative (DEPI) — Trainee</h3>
+                  <span class="timeline__track">Back-End .NET Development</span>
+                </div>
+                <div class="timeline__period">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  <span>Jul 2026 – Dec 2026</span>
+                </div>
+              </div>
+              <ul class="timeline__list">
+                <li>Developed backend solutions using C#, .NET, ASP.NET Core, and SQL.</li>
+                <li>Applied backend and database concepts through practical projects.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tech-pill">C#</span>
+                <span class="tech-pill">.NET</span>
+                <span class="tech-pill">ASP.NET Core</span>
+                <span class="tech-pill">SQL Server</span>
+                <span class="tech-pill">Web API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 4: Practical Experience Personal Projects -->
+          <div class="timeline__item">
+            <div class="timeline__node" aria-hidden="true">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="timeline__card timeline__card--highlight">
+              <div class="timeline__card-header">
+                <div class="timeline__role-group">
+                  <h3 class="timeline__role">Junior Full Stack .NET Developer — Personal Projects</h3>
+                  <span class="timeline__track">Practical Experience &amp; Full Stack Solutions</span>
+                </div>
+                <div class="timeline__period">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  <span>2025 – Present</span>
+                </div>
+              </div>
+              <ul class="timeline__list">
+                <li>Developed 4+ responsive web applications using HTML, CSS, JavaScript, C#, .NET, ASP.NET Core, and SQL.</li>
+                <li>Built frontend interfaces and backend functionality for complete web applications.</li>
+                <li>Worked with databases and implemented CRUD operations and RESTful APIs.</li>
+                <li>Applied OOP and clean coding practices to create maintainable solutions.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tech-pill">Full Stack</span>
+                <span class="tech-pill">C# / .NET</span>
+                <span class="tech-pill">ASP.NET Core MVC</span>
+                <span class="tech-pill">RESTful APIs</span>
+                <span class="tech-pill">CRUD Operations</span>
+                <span class="tech-pill">Clean Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: SKILLS ==================== -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <!-- Section Header with colored underline -->
+        <div class="section-header">
+          <h2 class="section-title">Skills</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- Large Category Cards (No percentages, no progress bars) -->
+        <div class="skills__categories">
+          <!-- Category 1: Frontend -->
+          <div class="skill-category">
+            <div class="skill-category__header">
+              <div class="skill-category__icon-box">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="skill-category__title">Frontend</h3>
+            </div>
+            <div class="skill-badge-grid">
+              <div class="skill-badge">
+                <i class="fa-brands fa-html5 skill-badge__icon"></i>
+                <span class="skill-badge__name">HTML5</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-brands fa-css3-alt skill-badge__icon"></i>
+                <span class="skill-badge__name">CSS3</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-brands fa-js skill-badge__icon"></i>
+                <span class="skill-badge__name">JavaScript</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-mobile-screen-button skill-badge__icon"></i>
+                <span class="skill-badge__name">Responsive Web Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend -->
+          <div class="skill-category">
+            <div class="skill-category__header">
+              <div class="skill-category__icon-box">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <h3 class="skill-category__title">Backend</h3>
+            </div>
+            <div class="skill-badge-grid">
+              <div class="skill-badge">
+                <i class="fa-solid fa-hashtag skill-badge__icon"></i>
+                <span class="skill-badge__name">C#</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-brands fa-microsoft skill-badge__icon"></i>
+                <span class="skill-badge__name">.NET</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-network-wired skill-badge__icon"></i>
+                <span class="skill-badge__name">ASP.NET Core</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-sitemap skill-badge__icon"></i>
+                <span class="skill-badge__name">MVC</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-cloud-arrow-up skill-badge__icon"></i>
+                <span class="skill-badge__name">Web API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Database -->
+          <div class="skill-category">
+            <div class="skill-category__header">
+              <div class="skill-category__icon-box">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="skill-category__title">Database</h3>
+            </div>
+            <div class="skill-badge-grid">
+              <div class="skill-badge">
+                <i class="fa-solid fa-table skill-badge__icon"></i>
+                <span class="skill-badge__name">SQL</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-server skill-badge__icon"></i>
+                <span class="skill-badge__name">SQL Server</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-cubes-stacked skill-badge__icon"></i>
+                <span class="skill-badge__name">Entity Framework Core</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools & Concepts -->
+          <div class="skill-category">
+            <div class="skill-category__header">
+              <div class="skill-category__icon-box">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <h3 class="skill-category__title">Tools &amp; Concepts</h3>
+            </div>
+            <div class="skill-badge-grid">
+              <div class="skill-badge">
+                <i class="fa-brands fa-git-alt skill-badge__icon"></i>
+                <span class="skill-badge__name">Git &amp; GitHub</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-cubes skill-badge__icon"></i>
+                <span class="skill-badge__name">OOP</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-arrows-split-up-and-left skill-badge__icon"></i>
+                <span class="skill-badge__name">REST APIs</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-filter skill-badge__icon"></i>
+                <span class="skill-badge__name">LINQ</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-puzzle-piece skill-badge__icon"></i>
+                <span class="skill-badge__name">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Soft Skills -->
+          <div class="skill-category">
+            <div class="skill-category__header">
+              <div class="skill-category__icon-box">
+                <i class="fa-solid fa-user-check"></i>
+              </div>
+              <h3 class="skill-category__title">Soft Skills</h3>
+            </div>
+            <div class="skill-badge-grid">
+              <div class="skill-badge">
+                <i class="fa-solid fa-lightbulb skill-badge__icon"></i>
+                <span class="skill-badge__name">Problem Solving</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-comments skill-badge__icon"></i>
+                <span class="skill-badge__name">Communication</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-users skill-badge__icon"></i>
+                <span class="skill-badge__name">Teamwork</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-clock skill-badge__icon"></i>
+                <span class="skill-badge__name">Time Management</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-arrows-rotate skill-badge__icon"></i>
+                <span class="skill-badge__name">Adaptability</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-arrow-trend-up skill-badge__icon"></i>
+                <span class="skill-badge__name">Continuous Learning</span>
+              </div>
+              <div class="skill-badge">
+                <i class="fa-solid fa-magnifying-glass skill-badge__icon"></i>
+                <span class="skill-badge__name">Attention to Detail</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6: FEATURED PROJECTS ==================== -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <!-- Section Header with colored underline -->
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- Projects Responsive Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Job Portal -->
+          <div class="project-card">
+            <!-- Upper section: Image preview placeholder -->
+            <div class="project-card__image-wrap">
+              <!-- EDITABLE PLACEHOLDER: Replace 'assets/images/project-jobportal.svg' with your project screenshot -->
+              <img src="assets/images/Jop_Portal.png" alt="Job Portal Project Preview" class="project-card__img" loading="lazy">
+              <div class="project-card__overlay">
+                <span class="project-card__tag">Full Stack</span>
+              </div>
+            </div>
+            <!-- Lower section: Project Information -->
+            <div class="project-card__content">
+              <h3 class="project-card__title">Job Portal</h3>
+              <p class="project-card__description">
+                A full-stack job portal that allows users to browse and manage job opportunities through a responsive and user-friendly interface. Built with Frontend technologies and Node.js for the backend.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-pill">Frontend</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">REST API</span>
+                <span class="tech-pill">Responsive UI</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://joblink-khaki.vercel.app/" class="btn btn--outline btn--sm" title="Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+                <a href="https://github.com/RawanAbulmaaref/frontend-project" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" title="View Code on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+         <!-- Project 2: Pet Care -->
+
+<div class="project-card">
+
+  <!-- Upper section: Image preview placeholder -->
+  <div class="project-card__image-wrap">
+
+    <!-- EDITABLE PLACEHOLDER: Replace 'assets/images/project-petcare.svg' with your project screenshot -->
+    <img src="assets/images/petcare.png" alt="Pet Care Project Preview" class="project-card__img" loading="lazy">
+
+    <div class="project-card__overlay">
+      <span class="project-card__tag">Frontend</span>
+    </div>
+
+  </div>
+
+  <!-- Lower section: Project Information -->
+  <div class="project-card__content">
+
+    <h3 class="project-card__title">Pet Care</h3>
+
+    <p class="project-card__description">
+      A responsive pet care web application designed with a clean and user-friendly interface.
+      Built using HTML, CSS, JavaScript, and Bootstrap with a focus on responsive design
+      and interactive user experience.
+    </p>
+
+    <div class="project-card__tech">
+
+      <span class="tech-pill">HTML5</span>
+      <span class="tech-pill">CSS3</span>
+      <span class="tech-pill">JavaScript</span>
+      <span class="tech-pill">Bootstrap</span>
+      <span class="tech-pill">Responsive UI</span>
+
+    </div>
+
+    <div class="project-card__actions">
+
+      <a href="https://rawanabulmaaref.github.io/PetCare-Project/" class="btn btn--outline btn--sm" title=" Live Demo">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+      </a>
+
+      <a href="https://github.com/RawanAbulmaaref/PetCare-Project" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" title="View Code on GitHub">
+        <i class="fa-brands fa-github"></i> Code
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+          <!-- Project 3: E-Commerce Project -->
+          <div class="project-card">
+            <!-- Upper section: Image preview placeholder -->
+            <div class="project-card__image-wrap">
+              <!-- EDITABLE PLACEHOLDER: Replace 'assets/images/project-ecommerce.svg' with your project screenshot -->
+              <img src="assets/images/ecommerce.png" alt="E-Commerce Project Preview" class="project-card__img" loading="lazy">
+              <div class="project-card__overlay">
+                <span class="project-card__tag">Web App</span>
+              </div>
+            </div>
+            <!-- Lower section: Project Information -->
+            <div class="project-card__content">
+              <h3 class="project-card__title">E-Commerce Project</h3>
+              <p class="project-card__description">
+                A responsive e-commerce website designed to provide a smooth online shopping experience, with product browsing, organized categories, and user-friendly interfaces.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">E-Commerce UX</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://rawanabulmaaref.github.io/electronic-project/" class="btn btn--outline btn--sm" title="Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+                <a href="https://github.com/RawanAbulmaaref/electronic-project" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" title="View Code on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: 3yadety Clinic -->
+          <div class="project-card">
+            <!-- Upper section: Image preview placeholder -->
+            <div class="project-card__image-wrap">
+              <!-- EDITABLE PLACEHOLDER: Replace 'assets/images/project-clinic.svg' with your project screenshot -->
+              <img src="assets/images/3eyadty.png" alt="3yadety Clinic Project Preview" class="project-card__img" loading="lazy">
+              <div class="project-card__overlay">
+                <span class="project-card__tag">ASP.NET MVC</span>
+              </div>
+            </div>
+            <!-- Lower section: Project Information -->
+            <div class="project-card__content">
+              <h3 class="project-card__title">3yadety Clinic</h3>
+              <p class="project-card__description">
+                A full-stack clinic management web application developed using Frontend technologies, ASP.NET MVC, and SQL, designed to manage clinic-related data and provide an easy-to-use interface.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-pill">Frontend</span>
+                <span class="tech-pill">ASP.NET MVC</span>
+                <span class="tech-pill">SQL Server</span>
+                <span class="tech-pill">C#</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://3eadty.runasp.net/" class="btn btn--outline btn--sm" title="Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                </a>
+                <a href="https://github.com/RawanAbulmaaref/3eyadty" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" title="View Code on GitHub">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project: أخبارنا — Arabic News Portal -->
+<div class="project-card">
+
+  <!-- Upper section: Image preview -->
+  <div class="project-card__image-wrap">
+
+    <!-- EDITABLE: Replace image path if needed -->
+    <img
+      src="assets/images/akhbarna.png"
+      alt="Arabic News Portal Project Preview"
+      class="project-card__img"
+      loading="lazy"
+    >
+
+    <div class="project-card__overlay">
+      <span class="project-card__tag">Full Stack</span>
+    </div>
+
+  </div>
+
+  <!-- Lower section: Project Information -->
+  <div class="project-card__content">
+
+    <h3 class="project-card__title">
+      أخبارنا — Arabic News Portal
+    </h3>
+
+    <p class="project-card__description">
+      A responsive Arabic RTL news portal that brings general news, sports,
+      and economic information together in one dynamic website. It consumes
+      live data from multiple external APIs for news, currency exchange rates,
+      weather, and sports results.
+    </p>
+
+    <div class="project-card__tech">
+
+      <span class="tech-pill">HTML5</span>
+
+      <span class="tech-pill">CSS3</span>
+
+      <span class="tech-pill">JavaScript</span>
+
+      <span class="tech-pill">REST APIs</span>
+
+      <span class="tech-pill">Chart.js</span>
+
+      <span class="tech-pill">Responsive RTL</span>
+
+    </div>
+
+    <div class="project-card__actions">
+
+      <a
+        href="https://rawanabulmaaref.github.io/News_website/"
+        class="btn btn--outline btn--sm"
+        title="Live Demo"
+      >
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        Demo
+      </a>
+
+      <a
+        href="https://github.com/RawanAbulmaaref/News_website"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn--secondary btn--sm"
+        title="View Code on GitHub"
+      >
+        <i class="fa-brands fa-github"></i>
+        Code
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 7: TESTIMONIALS ==================== -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <!-- Section Header with colored underline -->
+        <div class="section-header">
+          <h2 class="section-title">What People Say</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- Centered Main Testimonial Slider Container -->
+        <div class="testimonial-slider-wrapper">
+          <div class="testimonial-slider" id="testimonial-slider" role="region" aria-label="Client Testimonials Slider">
+            <!-- Testimonial 1: Rowena -->
+            <div class="testimonial-slide active" data-index="0">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote-mark">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-card__text">
+                  "It was a great experience working with Rawan. She understood the requirements well and delivered a professional and responsive website."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                    <span>R</span>
+                  </div>
+                  <div class="testimonial-card__info">
+                    <h3 class="testimonial-card__name">Rowena</h3>
+                    <span class="testimonial-card__role">Company Owner</span>
+                  </div>
+                  <div class="testimonial-card__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2: Aya -->
+            <div class="testimonial-slide" data-index="1">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote-mark">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-card__text">
+                  "Rawan was professional and attentive to my requirements. The website was well designed, responsive, and easy to use."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                    <span>A</span>
+                  </div>
+                  <div class="testimonial-card__info">
+                    <h3 class="testimonial-card__name">Aya</h3>
+                    <span class="testimonial-card__role">Veterinarian</span>
+                  </div>
+                  <div class="testimonial-card__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3: Mahmoud -->
+            <div class="testimonial-slide" data-index="2">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote-mark">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-card__text">
+                  "Great work and excellent communication. The website was delivered professionally and matched what I was looking for."
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                    <span>M</span>
+                  </div>
+                  <div class="testimonial-card__info">
+                    <h3 class="testimonial-card__name">Mahmoud</h3>
+                    <span class="testimonial-card__role">Shop Owner</span>
+                  </div>
+                  <div class="testimonial-card__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4: Adam -->
+            <div class="testimonial-slide" data-index="3">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote-mark">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-card__text">
+                  "I was very satisfied with the final result. The website was clean, responsive, and well organized. Great work!"
+                </p>
+                <div class="testimonial-card__author">
+                  <div class="testimonial-card__avatar">
+                    <span>A</span>
+                  </div>
+                  <div class="testimonial-card__info">
+                    <h3 class="testimonial-card__name">Adam</h3>
+                    <span class="testimonial-card__role">Doctor</span>
+                  </div>
+                  <div class="testimonial-card__rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="testimonial-controls">
+            <button class="slider-btn slider-btn--prev" id="prev-testimonial" aria-label="Previous Testimonial">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Testimonial Pagination">
+              <button class="dot active" data-slide="0" aria-label="Go to testimonial 1" role="tab" aria-selected="true"></button>
+              <button class="dot" data-slide="1" aria-label="Go to testimonial 2" role="tab" aria-selected="false"></button>
+              <button class="dot" data-slide="2" aria-label="Go to testimonial 3" role="tab" aria-selected="false"></button>
+              <button class="dot" data-slide="3" aria-label="Go to testimonial 4" role="tab" aria-selected="false"></button>
+            </div>
+            <button class="slider-btn slider-btn--next" id="next-testimonial" aria-label="Next Testimonial">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 8: MY SERVICES ==================== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <!-- Section Header with colored underline -->
+        <div class="section-header">
+          <h2 class="section-title">My Services</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- Services Centered Responsive Grid Layout -->
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-card__icon-wrap">
+              <i class="fa-solid fa-mobile-screen-button service-card__icon"></i>
+            </div>
+            <h3 class="service-card__title">Responsive Web Development</h3>
+            <p class="service-card__description">
+              Building modern and responsive websites for different screen sizes.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-card__icon-wrap">
+              <i class="fa-solid fa-palette service-card__icon"></i>
+            </div>
+            <h3 class="service-card__title">Frontend Development</h3>
+            <p class="service-card__description">
+              Creating interactive and user-friendly interfaces using HTML, CSS, JavaScript, and React.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-card__icon-wrap">
+              <i class="fa-solid fa-server service-card__icon"></i>
+            </div>
+            <h3 class="service-card__title">Backend Development</h3>
+            <p class="service-card__description">
+              Developing backend solutions and REST APIs using C#, .NET, and ASP.NET Core.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-card__icon-wrap">
+              <i class="fa-solid fa-database service-card__icon"></i>
+            </div>
+            <h3 class="service-card__title">Database Design</h3>
+            <p class="service-card__description">
+              Designing and managing relational databases using SQL Server and Entity Framework.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-card__icon-wrap">
+              <i class="fa-solid fa-briefcase service-card__icon"></i>
+            </div>
+            <h3 class="service-card__title">Portfolio Development</h3>
+            <p class="service-card__description">
+              Creating personal portfolios to showcase skills, projects, and professional experience.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-card__icon-wrap">
+              <i class="fa-solid fa-file-lines service-card__icon"></i>
+            </div>
+            <h3 class="service-card__title">CV Design</h3>
+            <p class="service-card__description">
+              Creating clean and professional CVs that present skills, education, training, and projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 9: GET IN TOUCH ==================== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <!-- Section Header with two-color gradient underline -->
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-underline section-underline--gradient"></div>
+        </div>
+
+        <!-- Contact Cards Layout (Two cards next to each other and centered) -->
+        <div class="contact-cards-container">
+          <!-- WhatsApp Card -->
+          <!-- EDITABLE PLACEHOLDER: Replace 'https://wa.me/YOUR_PHONE_NUMBER_HERE' with your WhatsApp number -->
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap contact-card__icon-wrap--whatsapp">
+              <i class="fa-brands fa-whatsapp contact-card__icon"></i>
+            </div>
+            <h3 class="contact-card__title">WhatsApp</h3>
+            <p class="contact-card__description">"Quick replies on WhatsApp"</p>
+            <a href="https://wa.me/01156959836" target="_blank" rel="noopener noreferrer" class="contact-card__cta" id="whatsapp-link">
+              <span>Message Me</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Gmail Card -->
+          <!-- EDITABLE PLACEHOLDER: Replace 'mailto:your.email@gmail.com' with your Gmail address -->
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap contact-card__icon-wrap--gmail">
+              <i class="fa-solid fa-envelope contact-card__icon"></i>
+            </div>
+            <h3 class="contact-card__title">Gmail</h3>
+            <p class="contact-card__description">"Send me an email anytime"</p>
+            <a href="mailto:rabulmaaref@gmail.com" class="contact-card__cta" id="gmail-link">
+              <span>Send Email</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <!-- Main Logo Centered with blue glow -->
+      <div class="footer__logo-wrap">
+        <a href="#home" class="footer__logo" aria-label="Rawan Abulmaaref Home">
+          <span class="footer__logo-bracket">&lt;</span><span class="footer__logo-text">RA</span><span class="footer__logo-slash">/</span><span class="footer__logo-bracket">&gt;</span>
+        </a>
+      </div>
+
+      <!-- Professional Motto -->
+      <p class="footer__motto">
+        Crafting modern, user-friendly web applications and reliable full-stack .NET solutions through clean code, continuous learning, and thoughtful design.
+      </p>
+
+      <!-- Centered Interactive Circular Social Links -->
+      <div class="footer__socials" aria-label="Footer social links">
+        <!-- EDITABLE PLACEHOLDER: Replace '#' with your Facebook profile link -->
+        <a href="https://www.facebook.com/rawan.abulmaaref/" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="Facebook (f)" title="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <!-- EDITABLE PLACEHOLDER: Replace '#' with your LinkedIn profile link -->
+        <a href="https://www.linkedin.com/in/rawan-abulmaaref-6296a9345/" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="LinkedIn (in)" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <!-- EDITABLE PLACEHOLDER: Replace '#' with your GitHub profile link -->
+        <a href="https://github.com/RawanAbulmaaref" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="GitHub (github)" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="footer__copyright">
+        &copy; 2026 Rawan Abulmaaref. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button: Bottom-right corner, square, rounded corners, glowing, contains ↑ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Application Bundle -->
+  <script src="js/script.js"></script>
+</body>
+</html>
